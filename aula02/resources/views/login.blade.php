@@ -70,7 +70,7 @@
         <div class="form">
             <form action="{{ route('home.post') }}" method="POST">
                 @csrf 
-                <!-- gera um token que previne ataques no http (necessário para que a página home carrege) -->
+                <!-- gera um token que previne ataques no http (necessário para que a página home carregue) -->
                 
                 <label for="login">Login</label><br>
                 <input type="text" name="username" id="login"><br>

@@ -16,8 +16,7 @@ Route::post('/home', function (Request $request) {
     if($user == "admin" && $pass == "123") {
         return redirect()->route('home'); 
     }else{
-        echo "erro ao realizar o login";
-        echo $user. $pass;
+        echo "erro ao realizar o login. Usuário ou senha incorretos";
     }
 })->name('home.post');
 
