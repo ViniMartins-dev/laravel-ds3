@@ -7,16 +7,51 @@
 
     <style>
 
-        .header {
-            
-        }
-
         .container {
-
         }
+
+        .header {
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+            background-color: #239ED0;
+            color: #FFFFFF;
+            font-family: Arial Black;
+            border-radius: 10px;
+        }
+
 
         .form {
+            padding-top: 70px;
+            width: 30%;
+            margin: auto;
+        }
 
+        form > label {
+            font-family: helvetica;
+            font-weight: bold;
+        }
+
+        form > input {
+            padding: 5px;
+            margin: 5px;
+            margin-left: 0px;
+            width: 97%;
+            border: none;
+            border-bottom: 2px #239ED0 solid;
+        }
+        
+        .btn {
+            border: none;
+            width: 100px;
+            font-family: helvetica;
+            font-weight: bold;
+            border-radius: 3px
+        }
+
+        .btn:hover {
+            border: 1px black solid;
         }
 
     </style>
@@ -24,25 +59,26 @@
 </head>
 <body>
 
-    <div class="header">
-
-        <p>Login de usuário</p>
-
-    </div>
-
     <div class="container">
+
+        <div class="header">
+
+            <p>Login de usuário</p>
+
+        </div>
+
         <div class="form">
             <form action="{{ route('home.post') }}" method="POST">
                 @csrf 
                 <!-- gera um token que previne ataques no http (necessário para que a página home carrege) -->
                 
-                <label for="login">Login</label>
-                <input type="text" name="username" id="login">
+                <label for="login">Login</label><br>
+                <input type="text" name="username" id="login"><br>
                 
-                <label for="pass">Senha</label>
-                <input type="password" name="password" id="pass">
+                <label for="pass">Senha</label><br>
+                <input type="password" name="password" id="pass"><br>
                 
-                <input type="submit" value="Entrar">
+                <input type="submit" value="Entrar" class='btn'>
             </form>
         </div>
     </div>

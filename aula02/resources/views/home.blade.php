@@ -6,9 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Bem-vindo à página inicial</h1>
+    <h1>Olá!</h1>
 
     <p>Usuário: <?php echo $username?></p>
-    <p>Senha: <?php echo $password?></p>
 </body>
 </html>

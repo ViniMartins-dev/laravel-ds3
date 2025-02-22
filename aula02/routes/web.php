@@ -9,10 +9,16 @@ Route::get('/login', function () {
 Route::post('/home', function (Request $request) {
 
     session(['username' => $request->input('username')]);
-    session(['password' => $request->input('password')]);
+    
+    $user = $request->input('username');
+    $pass = $request->input('password');
 
-
-    return redirect()->route('home'); 
+    if($user == "admin" && $pass == "123") {
+        return redirect()->route('home'); 
+    }else{
+        echo "erro ao realizar o login";
+        echo $user. $pass;
+    }
 })->name('home.post');
 
 
