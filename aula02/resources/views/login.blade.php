@@ -18,6 +18,7 @@
             background-color: #239ED0;
             color: #FFFFFF;
             font-family: Arial Black;
+            font-size: 20px;
             border-radius: 10px;
         }
 
@@ -63,7 +64,7 @@
 
         <div class="header">
 
-            <p>Login de usuário</p>
+            <p>Login</p>
 
         </div>
 
